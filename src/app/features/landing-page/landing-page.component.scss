@@ -1,70 +1,74 @@
-@use '@angular/material' as mat;
+.hero {
+  background: linear-gradient(to bottom right, var(--mat-sys-primary), var(--mat-sys-secondary));
+  color: var(--mat-sys-on-primary);
+  text-align: center;
+  padding: 50px 20px;
 
-.landing-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background-color: var(--mat-sys-surface); // Surface color
-  color: var(--mat-sys-on-surface); // Text color
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 
-  &__header {
-    text-align: center;
-    margin-bottom: 40px;
-
-    &__title {
+    h1 {
       font: var(--mat-sys-headline-large);
-      color: var(--mat-sys-primary); // Primary color for title
-    }
-
-    &__subtitle {
-      font: var(--mat-sys-body-large);
-      color: var(--mat-sys-on-surface-variant); // Subtle text color
-      margin-top: 10px;
-    }
-  }
-
-  &__features {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    width: 100%;
-
-    .feature {
-      text-align: center;
-      max-width: 300px;
-
-      &__icon {
-        font-size: 3rem;
-        color: var(--mat-sys-primary-container); // Accent color for icons
-        margin-bottom: 10px;
-      }
-
-      &__title {
-        font: var(--mat-sys-headline-small);
-        color: var(--mat-sys-on-surface); // Text color
-      }
-
-      &__description {
-        font: var(--mat-sys-body-medium);
-        color: var(--mat-sys-on-surface-variant); // Subtle text color
-      }
-    }
-  }
-
-  &__cta {
-    text-align: center;
-    margin-top: 40px;
-
-    .cta__message {
-      font: var(--mat-sys-title-large);
-      color: var(--mat-sys-on-primary-container); // Primary color contrast
       margin-bottom: 20px;
     }
 
-    .cta__button {
+    p {
+      font: var(--mat-sys-body-large);
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: var(--mat-sys-secondary);
+      color: var(--mat-sys-on-secondary);
       padding: 10px 20px;
-      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--secondary-hover-color); // Custom hover color token
+      }
+    }
+  }
+}
+
+.features {
+  background: var(--mat-sys-surface);
+  padding: 50px 20px;
+  text-align: center;
+
+  .features-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font: var(--mat-sys-headline-medium);
+      color: var(--mat-sys-primary);
+      margin-bottom: 30px;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .feature-item {
+        background: var(--mat-sys-secondary-container);
+        padding: 20px;
+        border-radius: 8px;
+
+        h3 {
+          font: var(--mat-sys-title-medium);
+          color: var(--mat-sys-primary);
+          margin-bottom: 10px;
+        }
+
+        p {
+          font: var(--mat-sys-body-medium);
+          color: var(--mat-sys-on-secondary-container);
+        }
+      }
     }
   }
 }

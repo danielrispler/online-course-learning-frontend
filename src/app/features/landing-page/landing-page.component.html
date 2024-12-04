@@ -1,29 +1,46 @@
-<div class="landing-page">
-    <header class="landing-page__header">
-        <h1 class="landing-page__title">Welcome to Learnly</h1>
-        <p class="landing-page__subtitle">Discover the best online courses designed for your success.</p>
-    </header>
-
-    <section class="landing-page__features">
-        <div class="feature">
-            <mat-icon class="feature__icon">school</mat-icon>
-            <h3 class="feature__title">Expert Instructors</h3>
-            <p class="feature__description">Learn from industry-leading professionals with years of experience.</p>
-        </div>
-        <div class="feature">
-            <mat-icon class="feature__icon">devices</mat-icon>
-            <h3 class="feature__title">Flexible Learning</h3>
-            <p class="feature__description">Access courses anytime, anywhere, on any device.</p>
-        </div>
-        <div class="feature">
-            <mat-icon class="feature__icon">check_circle</mat-icon>
-            <h3 class="feature__title">Certified Courses</h3>
-            <p class="feature__description">Earn certifications to boost your career and stand out.</p>
-        </div>
-    </section>
-
-    <section class="landing-page__cta">
-        <p class="cta__message">Ready to start learning?</p>
-        <button mat-raised-button color="primary" class="cta__button">Join Now</button>
-    </section>
+<div class="hero">
+    <div class="hero-content">
+        <h1>Prepare for IDF Tech Units</h1>
+        <p>Join our tailored courses to secure your position in IDF technology units.</p>
+        <button class="cta-button">Get a Free Demo Course</button>
+    </div>
 </div>
+
+<div class="features">
+    <div class="features-content">
+        <h2>Why Choose Our Courses?</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>Tailored Curriculum</h3>
+                <p>Focused on preparing you for IDF tech units.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Expert Mentorship</h3>
+                <p>Learn from professionals with real-world experience.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Guaranteed Progress</h3>
+                <p>Boost your skills to secure your dream position.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title> This is the expansion title </mat-panel-title>
+            <mat-panel-description> This is a summary of the content </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+            <mat-panel-title> Self aware panel </mat-panel-title>
+            <mat-panel-description>
+                Currently I am {{panelOpenState() ? 'open' : 'closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+</mat-accordion>

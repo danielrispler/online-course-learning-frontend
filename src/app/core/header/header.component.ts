@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { environment } from '../../enviroments/enviroments';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
-  protected title = environment.appName;
-}
+export class HeaderComponent { }
