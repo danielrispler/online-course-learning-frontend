@@ -1,0 +1,12 @@
+<div class="why-effective-container">
+    <h2>הבחירה הנכונה בשבילך</h2>
+    <div class="features-grid">
+        @for(feature of features; track feature.id) {
+            <div class="feature">
+                <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="courses-container">
+    <h1>Our Courses</h1>
+    @if (courses.status() === status.Resolved) {
+    <mat-grid-list cols="3" rowHeight="200px">
+        @for(course of courses.value(); track course._id) {
+        <mat-grid-tile class="mat-grid-tile">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ course.title }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ course.description }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="viewDetails(course._id)"
+                        [routerLink]="course.route">View Details</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+        }
+    </mat-grid-list>
+    }
+</div>

@@ -1,0 +1,39 @@
+.courses-container {
+  padding: 16px;
+  width: 800px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.mat-grid-tile{
+  width: 300px !important;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+mat-card-header {
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+button {
+  width: 100%;
+}
