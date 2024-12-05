@@ -1,11 +1,11 @@
 <div class="why-effective-container">
     <h2>הבחירה הנכונה בשבילך</h2>
     <div class="features-grid">
-        @for(feature of features; track feature.id) {
+        @for(whyUsData of whyUsDataArray; track whyUsData._id) {
             <div class="feature">
-                <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
-                <h3>{{ feature.title }}</h3>
-                <p>{{ feature.description }}</p>
+                <mat-icon class="feature-icon">{{ whyUsData.icon }}</mat-icon>
+                <h3>{{ whyUsData.title }}</h3>
+                <p>{{ whyUsData.description }}</p>
             </div>
         }
     </div>
