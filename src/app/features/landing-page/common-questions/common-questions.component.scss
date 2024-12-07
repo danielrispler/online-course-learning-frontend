@@ -3,14 +3,12 @@
 :host {
   display: block;
   padding: 20px;
-  background-color: var(--mat-sys-surface); // Background color from palette
   color: var(--mat-sys-on-surface); // Text color from palette
 
   mat-accordion {
     display: block;
     margin: 0 auto;
     max-width: 800px;
-    //background-color: var(--mat-sys-surface); // Neutral surface background
 
     mat-expansion-panel {
       margin-bottom: 10px;

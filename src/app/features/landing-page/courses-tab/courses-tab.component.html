@@ -1,24 +1,23 @@
-<div class="courses-container" dir="rtl">
-    <h1>Our Courses</h1>
+<div class="courses-container">
+    <h1>הקורסים שלנו</h1>
     @if (courses.status() === status.Resolved) {
-    <mat-grid-list cols="3" rowHeight="200px">
+    <div class="courses-grid">
         @for(course of courses.value(); track course._id) {
-        <mat-grid-tile class="mat-grid-tile">
+        <div class="course-card">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>{{ course.title }}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
                     <p>{{ course.description }}</p>
-                    <p>{{ course.price }}</p>
                 </mat-card-content>
                 <mat-card-actions>
                     <button mat-raised-button color="primary"
-                        [routerLink]="course.route">View Details</button>
+                        [routerLink]="course.route">לפרטים נוספים</button>
                 </mat-card-actions>
             </mat-card>
-        </mat-grid-tile>
+        </div>
         }
-    </mat-grid-list>
+    </div>
     }
 </div>
