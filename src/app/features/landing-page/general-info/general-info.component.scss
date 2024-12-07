@@ -1,0 +1,114 @@
+/* General Info Section */
+.general-info {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    direction: rtl; /* Hebrew alignment */
+}
+
+/* Image Container with Green Overlay */
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.image-container .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Slightly darken the image */
+}
+
+/* Green Overlay */
+.image-container .green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 118, 13, 0.8); /* Green tint overlay */
+    z-index: 2;
+}
+
+/* Content Styling */
+.general-info .content {
+    position: relative;
+    z-index: 3; /* Ensure content appears above image and overlay */
+    padding: 20px;
+    max-width: 800px;
+    color: #ffffff;
+    animation: slideInUp 1.5s ease forwards;
+}
+
+.general-info .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0 0 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.general-info .subtitle {
+    font-size: 1.5rem;
+    margin: 0 0 30px;
+    color: #d4f1d4; /* Light green */
+}
+
+.general-info .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d62d20; /* Red button for contrast */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.general-info .cta-button:hover {
+    background-color: #aa2316; /* Darker red on hover */
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .general-info {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .general-info .title {
+        font-size: 2.5rem;
+    }
+
+    .general-info .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .general-info .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

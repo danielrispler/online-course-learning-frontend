@@ -38,8 +38,9 @@ mat-card-header {
 }
 
 mat-card-title {
-  font-size: 22פס;
+  font-size: 22px;
   font-weight: bold;
+  color: var(--mat-sys-primary);
 }
 
 mat-card-content {
