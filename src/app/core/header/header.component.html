@@ -1,4 +1,19 @@
-<header dir="ltr">
+<header>
+    <nav>
+        <button class="menu-toggle" aria-label="Toggle Navigation" (click)="isMenuOpen = !isMenuOpen">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <ul [class.open]="isMenuOpen">
+            <li><a href="/gamaCyber">גאמא סייבר</a></li>
+            <li><a href="/computerSubjects">מקצועות המחשב</a></li>
+            <li><a href="/readMore">עוד על המיונים</a></li>
+            <li><a href="/about">עלינו</a></li>
+        </ul>
+    </nav>
     <div class="left-section">
         <a routerLink="/" class="logo">
             <span class="number">8200</span>
@@ -8,12 +23,4 @@
             </div>
         </a>
     </div>
-    <nav>
-        <ul dir="rtl">
-            <li><a href="/gamaCyber">גאמא סייבר</a></li>
-            <li><a href="/computerSubjects">מקצועות המחשב</a></li>
-            <li><a href="/readMore">עוד על המיונים</a></li>
-            <li><a href="/about">עלינו</a></li>
-        </ul>
-    </nav>
 </header>
