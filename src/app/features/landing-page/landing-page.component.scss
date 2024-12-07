@@ -33,46 +33,6 @@
   }
 }
 
-.features {
-  background: var(--mat-sys-surface);
-  padding: 50px 20px;
-  text-align: center;
-
-  .features-content {
-    max-width: 800px;
-    margin: 0 auto;
-
-    h2 {
-      font: var(--mat-sys-headline-medium);
-      color: var(--mat-sys-primary);
-      margin-bottom: 30px;
-    }
-
-    .feature-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      .feature-item {
-        background: var(--mat-sys-secondary-container);
-        padding: 20px;
-        border-radius: 8px;
-
-        h3 {
-          font: var(--mat-sys-title-medium);
-          color: var(--mat-sys-primary);
-          margin-bottom: 10px;
-        }
-
-        p {
-          font: var(--mat-sys-body-medium);
-          color: var(--mat-sys-on-secondary-container);
-        }
-      }
-    }
-  }
-}
-
 .app-courses-section{
   display: flex;
   justify-content: center;

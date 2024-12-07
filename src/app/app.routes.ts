@@ -20,5 +20,10 @@ export const routes: Routes = [
         path: 'computerSubjects',
         loadComponent: () => 
             import('./features/computer-subject-page/computer-subject-page.component').then(m => m.ComputerSubjectPageComponent)
+    },
+    {
+        path: 'readmore',
+        loadComponent: () => 
+            import('./features/computer-subject-page/computer-subject-page.component').then(m => m.ComputerSubjectPageComponent)
     }
 ];

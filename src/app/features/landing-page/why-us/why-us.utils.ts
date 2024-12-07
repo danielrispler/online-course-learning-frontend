@@ -1,26 +1,23 @@
-export const WHY_US_DATA = [
+export const BENEFITS_DATA = [
     {
-        _id: '1',
-        title: 'Learn from the best',
-        description: 'Our instructors are more than just teachers. They are passionate educators, acclaimed authors, and experts in their field.',
-        icon: 'school'
+      icon: 'swap_horizontal_circle', // Material icon for Customization
+      title: 'מותאם אישית עבורך',
+      description: 'קורסים עם תוכנית לימודים גמישה שמתאימה לצרכים שלך ומכילה מאות שעות תרגול וסרטוני הסבר.'
     },
     {
-        _id: '2',
-        title: 'Flexible learning',
-        description: 'We know that life can be busy and unpredictable. That is why we offer flexible learning options that fit your schedule.',
-        icon: 'schedule'
+      icon: 'medical_services', // Material icon for Most Representative
+      title: 'הכנה מדויקת',
+      description: 'ערכת ההכנה כוללת את כל התכנים שנבחנים במיונים, כך שתגיעו מוכנים לכל שלב.'
     },
     {
-        _id: '3',
-        title: 'Career services',
-        description: 'Our career services team will help you navigate the job market and find the perfect job for you.',
-        icon: 'work'
+      icon: 'school', // Material icon for Instructors
+      title: 'מדריכים מנוסים',
+      description: 'נבנה על ידי מפקדי עבר בגאמא סייבר ו-8200, עם שיטות מוכחות שמביאות לתוצאות.'
     },
     {
-        _id: '4',
-        title: 'Community',
-        description: 'Join our community of learners and professionals. Connect with like-minded individuals and build lasting relationships.',
-        icon: 'group'
+      icon: 'insights', // Material icon for Guarantee
+      title: 'אחוזי הצלחה גבוהים',
+      description: 'עזרנו למאות תלמידים להתקבל לתפקידים המובילים, עם תוכנית לימודים מותאמת ועדכנית.'
     }
-]
+  ];
+  

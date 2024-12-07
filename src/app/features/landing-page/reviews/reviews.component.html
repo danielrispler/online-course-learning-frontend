@@ -1,0 +1,35 @@
+<div class="reviews-container">
+  <div class="reviews-header">
+    <div class="review-stars">
+      @for(star of stars(); track $index){
+        <mat-icon>star</mat-icon>
+      }
+    </div>
+    <span class="reviews-count">{{ totalReviews().length }} Reviews</span>
+  </div>
+
+  <div class="reviews-carousel">
+    <button mat-icon-button (click)="prevReviews()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+
+    <div class="reviews-wrapper">
+      @for(review of displayedReviews(); track $index){
+        <mat-card class="review-card">
+          <div class="review-stars">
+            @for(star of stars(); track $index){
+              <mat-icon>star</mat-icon>
+            }
+          </div>
+          <div class="review-date">{{ review.date | date: 'dd/MM/yy' }}</div>
+          <h3 class="review-title">{{ review.name }}</h3>
+          <p class="review-text">{{ review.comment }}</p>
+        </mat-card>
+      }
+    </div>
+
+    <button mat-icon-button (click)="nextReviews()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  </div>
+</div>

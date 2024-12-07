@@ -1,12 +1,16 @@
 <div class="why-effective-container">
-    <h2>הבחירה הנכונה בשבילך</h2>
-    <div class="features-grid">
-        @for(whyUsData of whyUsDataArray; track whyUsData._id) {
-            <div class="feature">
-                <mat-icon class="feature-icon">{{ whyUsData.icon }}</mat-icon>
-                <h3>{{ whyUsData.title }}</h3>
-                <p>{{ whyUsData.description }}</p>
-            </div>
+    <h1>הבחירה הנכונה בשבילך</h1>
+    <div class="benefits-container">
+        @for(benefit of benefits; track $index){
+            <mat-card class="benefit-card">
+                <mat-card-header>
+                    <mat-icon class="benefit-icon">{{ benefit.icon }}</mat-icon>
+                </mat-card-header>
+                <mat-card-title class="benefit-title">{{ benefit.title }}</mat-card-title>
+                <mat-card-content>
+                    <p class="benefit-description">{{ benefit.description }}</p>
+                </mat-card-content>
+            </mat-card>
         }
-    </div>
+      </div>      
 </div>

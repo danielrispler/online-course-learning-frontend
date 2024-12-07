@@ -3,20 +3,22 @@
 // Define light theme
 $light-theme: (
   color: mat.$green-palette,
-  typography: Roboto,
+  typography: Ariel,
   density: 0
 );
 
 // Define dark theme
 $dark-theme: (
   color: mat.$green-palette,
-  typography: Roboto,
+  typography: Ariel,
   density: 0
 );
 
 // Apply light theme by default
 html {
   color-scheme: light;
+  direction: rtl;
+  text-align: right;
   @include mat.theme($light-theme);
 }
 
@@ -28,4 +30,20 @@ body {
 body.dark-mode {
   color-scheme: dark;
   @include mat.theme($dark-theme);
+}
+
+:root {
+  @include mat.expansion-overrides((
+    container-background-color: var(--mat-sys-secondary-container),
+    container-text-color: var(--mat-sys-on-secondary-container),
+  ));
+}
+
+h1 {
+  font: var(--mat-sys-headline-large); // Typography variable for headline
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--mat-sys-primary); // Primary color from palette
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }

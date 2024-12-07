@@ -1,51 +1,50 @@
-.why-effective-container {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
-  
-    h2 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 32px;
-    }
-  
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-  
-    .feature {
-      text-align: center;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-10px);
-      }
-  
-      .feature-icon {
-        font-size: 50px;
-        margin-bottom: 16px;
-        color: #3f51b5; // Primary color
-      }
-  
-      h3 {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
-  
-      p {
-        font-size: 14px;
-        color: #666;
-        margin: 0;
-      }
-    }
+.why-effective-container{
+  padding: 20px;
+  background-color: var(--mat-sys-surface); // Background color
+  color: var(--mat-sys-on-surface); // Text color
+
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.benefit-card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--mat-sys-surface-container); // Card background
+  border-radius: 8px;
+  box-shadow: var(--mat-sys-level1); // Elevation for the card
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--mat-sys-level2); // Elevation on hover
   }
-  
+}
+
+.benefit-icon {
+  font-size: 65px;
+  width: 65px;
+  height: 65px;
+  color: var(--mat-sys-primary); // Primary color for icons
+  margin-bottom: 16px;
+}
+
+.benefit-title {
+  font: var(--mat-sys-headline-small); // Typography for titles
+  margin-bottom: 12px;
+  color: var(--mat-sys-primary); // Primary color for titles
+}
+
+.benefit-description {
+  font: var(--mat-sys-body-medium); // Typography for descriptions
+  color: var(--mat-sys-on-surface); // Text color
+  line-height: 1.6;
+}

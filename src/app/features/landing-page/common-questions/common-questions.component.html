@@ -1,0 +1,20 @@
+<h1>שאלות נפוצות</h1>
+<mat-accordion>
+    @for(commonQuestion of commonQuestionsData; track commonQuestion._id){
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{commonQuestion.question}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+                {{commonQuestion.answer1}}
+            </p>
+            @if(commonQuestion.answer2){
+                <p>
+                    {{commonQuestion.answer2}}
+                </p>
+            }
+        </mat-expansion-panel>
+    }
+</mat-accordion>

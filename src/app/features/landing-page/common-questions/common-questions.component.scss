@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+
+:host {
+  display: block;
+  padding: 20px;
+  background-color: var(--mat-sys-surface); // Background color from palette
+  color: var(--mat-sys-on-surface); // Text color from palette
+
+  mat-accordion {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+    //background-color: var(--mat-sys-surface); // Neutral surface background
+
+    mat-expansion-panel {
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: var(--mat-sys-level1); // Use material elevation for subtle depth
+
+      &:hover {
+        box-shadow: var(--mat-sys-level2); // Elevated shadow on hover
+      }
+
+      mat-expansion-panel-header {
+        padding: 8px;
+        font-size: 24px; 
+        border-radius: 8px 8px 0 0;
+
+        &:hover {
+            box-shadow: var(--mat-sys-level2); // Elevated shadow on hover
+            background-color: color-mix(in srgb, var(--mat-sys-secondary-container) 85%, var(--mat-sys-surface) 15%);
+          }
+
+        mat-panel-title {
+          font-weight: bold;
+        }
+      }
+
+      p {
+        padding: 16px;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    }
+  }
+}

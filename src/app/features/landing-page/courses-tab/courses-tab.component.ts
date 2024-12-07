@@ -5,6 +5,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterLink } from '@angular/router';
 import { CourseDetails } from '@shared/course/course.type';
+import { COURSES_URL } from 'src/app.config';
 
 @Component({
   selector: 'app-courses',
@@ -17,7 +18,7 @@ export class CoursesComponent {
   protected readonly status = ResourceStatus;
   protected readonly courses = resource({
     loader: async (): Promise<CourseDetails[]> => {
-      const res = await fetch('http://localhost:3000/courses');
+      const res = await fetch(COURSES_URL);
       return res.json();
     },
   }); 
