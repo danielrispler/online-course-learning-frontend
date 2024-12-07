@@ -2,10 +2,10 @@
   <div class="reviews-header">
     <div class="review-stars">
       @for(star of stars(); track $index){
-        <mat-icon>star</mat-icon>
+      <mat-icon>star</mat-icon>
       }
     </div>
-    <span class="reviews-count">{{ totalReviews().length }} Reviews</span>
+    <span class="reviews-count">{{ totalReviews().length }} חוות דעת</span>
   </div>
 
   <div class="reviews-carousel">
@@ -15,16 +15,20 @@
 
     <div class="reviews-wrapper">
       @for(review of displayedReviews(); track $index){
-        <mat-card class="review-card">
+      <mat-card class="review-card">
+        <div class="review-header">
           <div class="review-stars">
-            @for(star of stars(); track $index){
-              <mat-icon>star</mat-icon>
+            @for (star of stars(); track $index) {
+            <mat-icon>star</mat-icon>
             }
           </div>
           <div class="review-date">{{ review.date | date: 'dd/MM/yy' }}</div>
+        </div>
+        <div class="review-content">
           <h3 class="review-title">{{ review.name }}</h3>
           <p class="review-text">{{ review.comment }}</p>
-        </mat-card>
+        </div>
+      </mat-card>
       }
     </div>
 

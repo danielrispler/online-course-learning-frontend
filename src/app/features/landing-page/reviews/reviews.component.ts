@@ -38,10 +38,10 @@ export class ReviewsComponent implements OnInit {
   }
 
   nextReviews(): void {
-    this.startIndex.set((this.startIndex() + 1) % this.totalReviews().length);
+    this.startIndex.set((this.startIndex() - 1 + this.totalReviews().length) % this.totalReviews().length);
   }
 
   prevReviews(): void {
-    this.startIndex.set((this.startIndex() - 1 + this.totalReviews().length) % this.totalReviews().length);
+    this.startIndex.set((this.startIndex() + 1) % this.totalReviews().length);
   }
 }
