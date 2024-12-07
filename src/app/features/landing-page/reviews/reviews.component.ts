@@ -1,10 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
-import { resource, computed, signal } from '@angular/core';
-import { REVIEWS_URL } from 'src/app.config';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
 import { DatePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, OnInit, resource, signal } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { REVIEWS_URL } from 'src/app.config';
 import { Review } from './reviews.type';
 
 @Component({
@@ -18,7 +16,7 @@ export class ReviewsComponent implements OnInit {
   protected readonly stars = signal(Array(5));
   private readonly startIndex = signal(0);
   private readonly reviewsResource = resource({
-    loader: async ():Promise<Review[]> => {
+    loader: async (): Promise<Review[]> => {
       const response = await fetch(REVIEWS_URL);
       return response.json();
     },
